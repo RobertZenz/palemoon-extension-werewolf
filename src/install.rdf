@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	<Description about="urn:mozilla:install-manifest">
+		
+		<!-- General addon information -->
+		<em:id>werewolf@bonsaimind.org</em:id>
+		<em:name>Werewolf</em:name>
+		<em:version>1.0</em:version>
+		<em:type>2</em:type>
+		<em:multiprocessCompatible>true</em:multiprocessCompatible>
+		<em:description>Customization options for the GUI.</em:description>
+		
+		<!-- Options dialog -->
+		<em:optionsURL>chrome://werewolf/content/preferences/PreferencePage.html</em:optionsURL>
+		<em:optionsType>3</em:optionsType>
+		
+		<!-- If it is a bootstrap addon. -->
+		<em:bootstrap>true</em:bootstrap>
+		
+		<!-- Palemoon -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
+				<em:minVersion>27.0</em:minVersion>
+				<em:maxVersion>27.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+	</Description>
+</RDF>
+

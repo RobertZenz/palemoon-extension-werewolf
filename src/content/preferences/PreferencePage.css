@@ -1,0 +1,84 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+html {
+	background-color: #2e3436;
+	background-image: url("./logo.svg"), url("./background.png");
+	background-position: top right;
+	background-repeat: no-repeat, repeat;
+	background-size: 16%, auto;
+}
+
+body {
+	background-color: #fefefe;
+	border: 1px solid #888a85;
+	font-family: sans;
+	font-size: 77%;
+	margin: 3em auto;
+	padding: 1em;
+	width: 60em;
+}
+
+h1, h2, h3, h4, h5 {
+	border-bottom: 1px solid #d3d7cf;
+	padding-left: 0.33em;
+}
+
+input[type="number"] {
+	text-align: right;
+	width: 4em;
+}
+
+label {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+label:after {
+	color: #eeeeec;	
+	content: "•";
+}
+
+.block-container {
+	display: table;
+	width: 100%;
+}
+
+.block-container > * {
+	display: table-cell;
+}
+
+.changed:after {
+	color: #729fcf;
+}
+
+.options-container {
+	display: table;
+	table-layout: fixed;
+	width: 94%;
+}
+
+.options-container > * {
+	display: table-cell;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.options-container > *:nth-child(2n) {
+	width: 4em;
+}
+
+.options-container > *:nth-child(2n + 1) {
+	overflow: visible;
+	text-align: right;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.sub-container {
+	padding-left: 2em;
+	padding-right: 2em;
+}

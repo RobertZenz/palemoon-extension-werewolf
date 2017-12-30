@@ -1,0 +1,229 @@
+<!--
+  -- This Source Code Form is subject to the terms of the Mozilla Public
+  -- License, v. 2.0. If a copy of the MPL was not distributed with this
+  -- file, You can obtain one at http://mozilla.org/MPL/2.0/.
+  -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>Werewolf Preferences</title>
+		
+		<link rel="stylesheet"href="./PreferencePage.css">
+	</head>
+	
+	<body>
+		<h1>Werewolf - Preferences</h1>
+		
+		<div class="sub-container">
+			<button id="defaults">
+				<img src="./icons/edit-clear.svg"><br>
+				Revert to defaults
+			</button>
+			<button id="import">
+				<img src="./icons/document-open.svg"><br>
+				Import preferences
+			</button>
+			<button id="export">
+				<img src="./icons/document-save-as.svg"><br>
+				Export preferences
+			</button>
+		</div>
+		
+		<h2>Bookmarksbar</h2>
+		<div class="sub-container">
+			<div class="options-container">
+				<preference name="bookmarks.bar-height" label="Bar Height" description="The height of the bar in pixels." min="0"></preference>
+				<placeholder></placeholder>
+				<placeholder></placeholder>
+			</div>
+			
+			<div class="options-container">
+				<preference name="bookmarks.padding-top" label="Padding Top" description="The padding of the bookmarks to the top border."></preference>
+				<preference name="bookmarks.padding-bottom" label="Padding Bottom" description="The padding of the bookmarks to bottom border."></preference>
+				<placeholder></placeholder>
+			</div>
+			
+			<h3>Bookmarks</h3>
+			
+			<div class="options-container">
+				<preference name="bookmarks.bookmark.padding-top" label="Padding Top" description="The padding of the content to the top border."></preference>
+				<preference name="bookmarks.bookmark.padding-bottom" label="Padding Bottom" description="The padding of the content to bottom border."></preference>
+				<placeholder></placeholder>
+			</div>
+			
+			<div class="options-container">
+				<preference name="bookmarks.bookmark-folder.icon-visible" label="Folder Icon" description="If the folder icon should be visible."></preference>
+				<preference name="bookmarks.bookmark-folder.name-visible" label="Folder Name" description="If the folder name should be visible."></preference>
+				<preference name="bookmarks.bookmark-folder.dropdown-visible" label="Dropdown" description="If the dropdown arrow should be visible."></preference>
+			</div>
+			
+			<div class="options-container">
+				<preference name="bookmarks.bookmark-item.icon-visible" label="Site Icon" description="If the item icon should be visible."></preference>
+				<preference name="bookmarks.bookmark-item.name-visible" label="Site Name" description="If the item name should be visible."></preference>
+				<placeholder></placeholder>
+			</div>
+			
+			<h3>Dropdown</h3>
+			
+			<div class="options-container">
+				<preference name="bookmarks.dropdown.open-all-in-tabs-visible" label="Open All in Tabs" description=""></preference>
+				<preference name="bookmarks.dropdown.scrollbar" label="Scrollbar" description=""></preference>
+				<preference name="bookmarks.dropdown.minimum-width" label="Minimum Width" description="" min="0"></preference>
+			</div>
+		</div>
+		
+		<h2>Findbar</h2>
+		
+		<h2>Menubar</h2>
+		<div class="sub-container">
+			<div class="options-container">
+				<preference name="menubar.bar-height" label="Bar Height" description="The height of the bar in pixels." min="0"></preference>
+				<placeholder></placeholder>
+				<placeholder></placeholder>
+			</div>
+			
+			<div class="options-container">
+				<preference name="menubar.padding-top" label="Padding Top" description=""></preference>
+				<preference name="menubar.padding-bottom" label="Padding Bottom" description=""></preference>
+				<placeholder></placeholder>
+			</div>
+		</div>
+		
+		<h2>Navigationbar</h2>
+		<div class="sub-container">
+			<div class="options-container">
+				<preference name="navigationbar.bar-height" label="Bar Height" description="The height of the bar in pixels." min="0"></preference>
+				<placeholder></placeholder>
+				<placeholder></placeholder>
+			</div>
+			
+			<div class="options-container">
+				<preference name="navigationbar.padding-top" label="Padding Top" description=""></preference>
+				<preference name="navigationbar.padding-bottom" label="Padding Bottom" description=""></preference>
+				<placeholder></placeholder>
+			</div>
+		</div>
+
+		<h2>Tabs</h2>
+		<div class="sub-container">
+			<div class="options-container">
+				<preference name="tabs.height" label="Height" description="The height of the tab bar in pixels." min="0"></preference>
+				<preference name="tabs.gap" label="Gap" description="The gap between tabs in pixels. The value of the gap will be distributed to the left and right of the tab so that also a gap from the sides will occur which is half of the set value."></preference>
+				<placeholder></placeholder>
+			</div>
+			
+			<h3>Border</h3>
+			
+			<div class="options-container">
+				<preference name="tabs.custom-border" label="Custom Border" description="Activates the custom border. This allows to set the color and radius of the edges of the border."></preference>
+				<preference name="tabs.custom-border-color-selected" label="Selected Color" description="The color the border should have on the selected tab."></preference>
+				<preference name="tabs.custom-border-radius" label="Corner Radius" description="The radius of the edges of the border." min="0"></preference>
+			</div>
+			
+			<div class="options-container">
+				<placeholder></placeholder>
+				<preference name="tabs.custom-border-color" label="Color" description="The color the border should have on all non-selected tabs."></preference>
+				<placeholder></placeholder>
+			</div>
+			
+			<h3>Content</h3>
+			
+			<div class="options-container">
+				<preference name="tabs.padding-top" label="Padding Top" description="The padding of the content (icon, name, etc.) top the top."></preference>
+				<preference name="tabs.padding-bottom" label="Padding Bottom" description="The padding of the content (icon, name, etc.) to the bottom."></preference>
+				<placeholder></placeholder>
+			</div>
+			
+			<div class="options-container">
+				<preference name="tabs.padding-left" label="Padding Left" description="The padding of the content (icon, name, etc.) on the left."></preference>
+				<preference name="tabs.padding-right" label="Padding Right" description="The padding of the content (icon, name, etc.) on the right."></preference>
+				<placeholder></placeholder>
+			</div>
+			
+			<h3>Visible Elements</h3>
+			
+			<div class="options-container">
+				<preference name="tabs.throbber-visible" label="Throbber" description="If the throbber/loading icon should be visible."></preference>
+				<preference name="tabs.siteicon-visible" label="Site Icon" description="If the site icon should be visible."></preference>
+				<preference name="tabs.sitename-visible" label="Site Name" description="If the site name should be visible."></preference>
+				<preference name="tabs.closebutton-visible" label="Close Button" description="If the close button should be visible."></preference>
+			</div>
+		</div>
+		
+		<menu type="context" id="preference-menu">
+			<menuitem id="undo" label="Undo current changes" icon="./icons/edit-undo.svg"></menuitem>
+			<menuitem id="revert" label="Revert to default" icon="./icons/edit-clear.svg"></menuitem>
+		</menu>
+		
+		<template id="preference-template">
+			<div>
+			<label for="$NAME" tooltip="$DESCRIPTION" contextmenu="preference-menu" oncontextmenu="document.popupNode = event.target;">$LABEL</label>
+			</div><div><input id="$NAME" tooltip="$DESCRIPTION" contextmenu="preference-menu" oncontextmenu="document.popupNode = event.target;" $ATTRIBUTES>
+			</div>
+		</template>
+		
+		<template id="placeholder-template">
+			<span></span><span></span>
+		</template>
+	</body>
+	
+	<script src="./PreferencePage.js"></script>
+	
+	<script>
+		try {
+			var replaceAll = function(tagName, replacementProvider) {
+				var elements = document.getElementsByTagName(tagName);
+				
+				while (elements.length > 0) {
+					var element = elements[0];
+					
+					element.outerHTML = replacementProvider(element);
+				}
+			};
+			
+			var preferenceTemplate = document.getElementById("preference-template");
+			
+			replaceAll("preference", function(preference) {
+				var attributes = "";
+				
+				if (preference.getAttribute("min") !== null
+						&& preference.getAttribute("min") !== "null") {
+					attributes = attributes + "min=\"" + preference.getAttribute("min") + "\"";
+				}
+				
+				var html = preferenceTemplate.innerHTML;
+				
+				return html
+						.replace(/\$attributes=""/, attributes)
+						.replace(/\$DESCRIPTION/g, preference.getAttribute("description"))
+						.replace(/\$NAME/g, preference.getAttribute("name"))
+						.replace(/\$LABEL/g, preference.getAttribute("label"));
+			});
+		
+			var placeholderTemplate = document.getElementById("placeholder-template");
+			
+			replaceAll("placeholder", function(placeholder) {
+				return placeholderTemplate.innerHTML;
+			});
+		} catch (error) {
+			console.error(error);
+		}
+	</script>
+	<script>
+		try {
+			window.controller = new PreferencePage(window);
+			window.controller.connectButtons();
+			window.controller.connectFields();
+			
+			window.addEventListener("beforeunload", function(event) {
+				window.controller.disconnectButtons();
+				window.controller.disconnectFields();
+			});
+		} catch (error) {
+			console.error(error);
+		}
+	</script>
+</html>
+
