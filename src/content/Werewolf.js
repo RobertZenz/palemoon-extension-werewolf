@@ -148,6 +148,18 @@ var Werewolf = {
 					.autoPadding("top", value));
 		}.bind(this));
 		
+		this.preferences.registerBool("general.disable-animations", function(name, value) {
+			if (value) {
+				this.styleSheet.register(name, new CSSBuilder()
+						.addSelector("*")
+						.add("animation-delay", "0ms")
+						.add("animation-duration", "0ms")
+						.add("transition", "none"));
+			} else {
+				this.styleSheet.unregister(name);
+			}
+		}.bind(this));
+		
 		this.preferences.registerInt("menubar.bar-height", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
 					.addSelector("#toolbar-menubar")
