@@ -51,6 +51,18 @@ label:after {
 	display: table-cell;
 }
 
+.button-container {
+	display: table;
+	table-layout: fixed;
+	width: 94%;
+}
+
+.button-container > * {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
 .changed:after {
 	color: #729fcf;
 }
