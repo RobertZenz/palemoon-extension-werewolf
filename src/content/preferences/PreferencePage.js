@@ -20,6 +20,7 @@ var PreferencePage = function(window) {
 	this.importHandler = null;
 	this.ignoreFieldChanges = false;
 	this.preferenceChangeListener = null;
+	this.undoHandler = null;
 	this.window = window;
 	
 	this.connectButton = function(button, handler) {
@@ -40,13 +41,15 @@ var PreferencePage = function(window) {
 		this.defaultsHandler = this.onDefaultsClicked.bind(this);
 		this.exportHandler = this.onExportClicked.bind(this);
 		this.importHandler = this.onImportClicked.bind(this);
+		this.undoHandler = this.onUndoClicked.bind(this);
 		
 		this.connectButton(this.document.getElementById("defaults"), this.defaultsHandler);
 		this.connectButton(this.document.getElementById("export"), this.exportHandler);
 		this.connectButton(this.document.getElementById("import"), this.importHandler);
+		this.connectButton(this.document.getElementById("undo"), this.undoHandler);
 		
-		this.connectButton(this.document.getElementById("revert"), this.onFieldRevert);
-		this.connectButton(this.document.getElementById("undo"), this.onFieldUndo);
+		this.connectButton(this.document.getElementById("revert-field"), this.onFieldRevert);
+		this.connectButton(this.document.getElementById("undo-field"), this.onFieldUndo);
 	};
 	
 	this.connectField = function(field) {
@@ -292,6 +295,18 @@ var PreferencePage = function(window) {
 		
 		this.updateFieldState(field);
 		this.updateTooltip(field);
+	};
+	
+	this.onUndoClicked = function(event) {
+		try {
+			for (var field of this.document.getElementsByTagName("input")) {
+				if (isSet(field.originalValue)) {
+					Werewolf.preferences.set(field.id, field.originalValue);
+				}
+			}
+		} catch (error) {
+			alert(error);
+		}
 	};
 	
 	this.setFieldValue = function(field, value) {
