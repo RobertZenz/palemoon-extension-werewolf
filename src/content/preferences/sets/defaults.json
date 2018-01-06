@@ -35,11 +35,12 @@
 	"tabs.custom-border-color-selected": "#a0a0a0",
 	"tabs.gap": 0,
 	"tabs.height": 28,
-	"tabs.padding-bottom": 0,
-	"tabs.padding-left": 0,
-	"tabs.padding-right": 0,
 	"tabs.padding-top": 0,
 	"tabs.siteicon-visible": true,
 	"tabs.sitename-visible": true,
+	"tabs.tab.padding-bottom": 0,
+	"tabs.tab.padding-left": 0,
+	"tabs.tab.padding-right": 0,
+	"tabs.tab.padding-top": 0,
 	"tabs.throbber-visible": true
 }

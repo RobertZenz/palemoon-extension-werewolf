@@ -308,28 +308,10 @@ var Werewolf = {
 					.forceHeight(value));
 		}.bind(this));
 		
-		this.preferences.registerInt("tabs.padding-bottom", function(name, value) {
-			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector(".tabbrowser-tab .tab-content")
-					.autoPadding("bottom", value));
-		}.bind(this));
-		
-		this.preferences.registerInt("tabs.padding-left", function(name, value) {
-			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector(".tabbrowser-tab .tab-content")
-					.autoPadding("left", value));
-		}.bind(this));
-		
-		this.preferences.registerInt("tabs.padding-right", function(name, value) {
-			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector(".tabbrowser-tab .tab-content")
-					.autoPadding("right", value));
-		}.bind(this));
-		
 		this.preferences.registerInt("tabs.padding-top", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector(".tabbrowser-tab .tab-content")
-					.autoPadding("top", value));
+					.addSelector(".tabbrowser-tab")
+					.margin("top", value));
 		}.bind(this));
 		
 		this.preferences.registerBool("tabs.siteicon-visible", function(name, value) {
@@ -350,6 +332,30 @@ var Werewolf = {
 						.addSelector(".tabbrowser-tab .tab-text")
 						.hide());
 			}
+		}.bind(this));
+		
+		this.preferences.registerInt("tabs.tab.padding-bottom", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector(".tabbrowser-tab .tab-content")
+					.autoPadding("bottom", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("tabs.tab.padding-left", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector(".tabbrowser-tab .tab-content")
+					.autoPadding("left", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("tabs.tab.padding-right", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector(".tabbrowser-tab .tab-content")
+					.autoPadding("right", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("tabs.tab.padding-top", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector(".tabbrowser-tab .tab-content")
+					.autoPadding("top", value));
 		}.bind(this));
 		
 		this.preferences.registerBool("tabs.throbber-visible", function(name, value) {
