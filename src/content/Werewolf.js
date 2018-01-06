@@ -368,6 +368,18 @@ var Werewolf = {
 			}
 		}.bind(this));
 		
+		this.preferences.registerInt("urlbar.padding-bottom", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#urlbar")
+					.margin("bottom", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("urlbar.padding-top", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#urlbar")
+					.margin("top", value));
+		}.bind(this));
+		
 		this.styleSheet.defer();
 		
 		Files.getContent(
