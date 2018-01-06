@@ -71,6 +71,30 @@ var Werewolf = {
 			}
 		}.bind(this));
 		
+		this.preferences.registerInt("bookmarks.bookmark-folder.padding-bottom", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu] > *")
+					.autoPadding("bottom", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("bookmarks.bookmark-folder.padding-left", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu] > *")
+					.autoPadding("left", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("bookmarks.bookmark-folder.padding-right", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu] > *")
+					.autoPadding("right", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("bookmarks.bookmark-folder.padding-top", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu] > *")
+					.autoPadding("top", value));
+		}.bind(this));
+		
 		this.preferences.registerBool("bookmarks.bookmark-item.icon-visible", function(name, value) {
 			if (value) {
 				this.styleSheet.unregister(name);
@@ -89,6 +113,30 @@ var Werewolf = {
 						.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]) > .toolbarbutton-text")
 						.hide());
 			}
+		}.bind(this));
+		
+		this.preferences.registerInt("bookmarks.bookmark-item.padding-bottom", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]) > *")
+					.autoPadding("bottom", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("bookmarks.bookmark-item.padding-left", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]) > *")
+					.autoPadding("left", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("bookmarks.bookmark-item.padding-right", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]) > *")
+					.autoPadding("right", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("bookmarks.bookmark-item.padding-top", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]) > *")
+					.autoPadding("top", value));
 		}.bind(this));
 		
 		this.preferences.registerInt("bookmarks.bookmark.padding-bottom", function(name, value) {
@@ -134,6 +182,13 @@ var Werewolf = {
 			} else {
 				this.styleSheet.unregister(name);
 			}
+		}.bind(this));
+		
+		this.preferences.registerInt("bookmarks.gap", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PlacesToolbarItems > *")
+					.add("margin-left", Math.floor(value / 2) + "px")
+					.add("margin-right", Math.ceil(value / 2) + "px"));
 		}.bind(this));
 		
 		this.preferences.registerInt("bookmarks.padding-bottom", function(name, value) {
