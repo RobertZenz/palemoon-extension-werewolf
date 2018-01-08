@@ -85,7 +85,7 @@ var Werewolf = {
 		
 		this.preferences.registerInt("bookmarks.bookmark-folder.padding-right", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu]:first-child")
+					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu]:last-child")
 					.autoPadding("right", value));
 		}.bind(this));
 		
@@ -129,7 +129,7 @@ var Werewolf = {
 		
 		this.preferences.registerInt("bookmarks.bookmark-item.padding-right", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]):first-child")
+					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]):last-child")
 					.autoPadding("right", value));
 		}.bind(this));
 		
