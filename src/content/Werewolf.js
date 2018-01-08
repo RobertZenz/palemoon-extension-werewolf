@@ -79,13 +79,13 @@ var Werewolf = {
 		
 		this.preferences.registerInt("bookmarks.bookmark-folder.padding-left", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu] > *")
+					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu]:first-child")
 					.autoPadding("left", value));
 		}.bind(this));
 		
 		this.preferences.registerInt("bookmarks.bookmark-folder.padding-right", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu] > *")
+					.addSelector("#PlacesToolbarItems > .bookmark-item[type=menu]:first-child")
 					.autoPadding("right", value));
 		}.bind(this));
 		
@@ -123,13 +123,13 @@ var Werewolf = {
 		
 		this.preferences.registerInt("bookmarks.bookmark-item.padding-left", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]) > *")
+					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]):first-child")
 					.autoPadding("left", value));
 		}.bind(this));
 		
 		this.preferences.registerInt("bookmarks.bookmark-item.padding-right", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]) > *")
+					.addSelector("#PlacesToolbarItems > .bookmark-item:not([type]):first-child")
 					.autoPadding("right", value));
 		}.bind(this));
 		
