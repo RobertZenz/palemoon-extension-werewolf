@@ -266,7 +266,7 @@ var Werewolf = {
 		this.preferences.registerBool("tabs.custom-border", function(name, value) {
 			if (value) {
 				this.styleSheet.register(name, new CSSBuilder()
-						.addSelector(".tabbrowser-tab")
+						.addSelector(".tabbrowser-tab:not([tiletabs-single=\"hidden\"])")
 						.add("background-position", "0px")
 						.add("background-size", "100%")
 						.add("border", "none")
@@ -285,7 +285,7 @@ var Werewolf = {
 		}.bind(this));
 		this.preferences.registerChar("tabs.custom-border-color", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector(".tabbrowser-tab")
+					.addSelector(".tabbrowser-tab:not([tiletabs-single=\"hidden\"])")
 					.add("border-color", value));
 		}.bind(this));
 		this.preferences.registerChar("tabs.custom-border-color-selected", function(name, value) {
