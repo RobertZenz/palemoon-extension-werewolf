@@ -43,6 +43,8 @@
 	"tabs.tab.padding-right": 0,
 	"tabs.tab.padding-top": 0,
 	"tabs.throbber-visible": true,
+	"urlbar.identitybox.padding-bottom": -3,
+	"urlbar.identitybox.padding-top": -3,
 	"urlbar.padding-bottom": 0,
 	"urlbar.padding-top": 0
 }
