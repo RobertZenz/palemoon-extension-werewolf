@@ -390,6 +390,15 @@ var Werewolf = {
 			}
 		}.bind(this));
 		
+		this.preferences.registerBool("urlbar.identitybox.disable-background", function(name, value) {
+			if (value) {
+				this.styleSheet.register(name, new CSSBuilder()
+						.addSelector("#urlbar[pageproxystate] #identity-box")
+						.add("background-image", "none"));
+			} else {
+				this.styleSheet.unregister(name);
+			}
+		}.bind(this));
 		
 		this.preferences.registerInt("urlbar.identitybox.padding-bottom", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
