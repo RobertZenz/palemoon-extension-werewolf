@@ -402,13 +402,13 @@ var Werewolf = {
 		
 		this.preferences.registerInt("urlbar.identitybox.padding-bottom", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#urlbar #identity-box")
+					.addSelector("#urlbar #identity-box > *")
 					.margin("bottom", value));
 		}.bind(this));
 		
 		this.preferences.registerInt("urlbar.identitybox.padding-top", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#urlbar #identity-box")
+					.addSelector("#urlbar #identity-box > *")
 					.margin("top", value));
 		}.bind(this));
 		
