@@ -253,6 +253,18 @@ var Werewolf = {
 					.autoPadding("top", value));
 		}.bind(this));
 		
+		this.preferences.registerInt("personaltoolbar.padding-bottom", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PersonalToolbar > *")
+					.margin("bottom", value));
+		}.bind(this));
+		
+		this.preferences.registerInt("personaltoolbar.padding-top", function(name, value) {
+			this.styleSheet.register(name, new CSSBuilder()
+					.addSelector("#PersonalToolbar > *")
+					.margin("top", value));
+		}.bind(this))
+		
 		this.preferences.registerBool("tabs.closebutton-visible", function(name, value) {
 			if (value) {
 				this.styleSheet.unregister(name);

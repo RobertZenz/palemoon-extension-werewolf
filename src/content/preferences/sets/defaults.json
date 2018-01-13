@@ -28,6 +28,8 @@
 	"navigationbar.bar-height": 32,
 	"navigationbar.padding-bottom": 0,
 	"navigationbar.padding-top": 0,
+	"personaltoolbar.padding-bottom": 0,
+	"personaltoolbar.padding-top": 0,
 	"tabs.closebutton-visible": true,
 	"tabs.custom-border": false,
 	"tabs.custom-border-radius": 0,
