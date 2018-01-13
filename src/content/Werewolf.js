@@ -380,6 +380,17 @@ var Werewolf = {
 			}
 		}.bind(this));
 		
+		this.preferences.registerBool("urlbar.disable-highlights", function(name, value) {
+			if (value) {
+				this.styleSheet.register(name, new CSSBuilder()
+						.addSelector("#urlbar")
+						.add("box-shadow", "none"));
+			} else {
+				this.styleSheet.unregister(name);
+			}
+		}.bind(this));
+		
+		
 		this.preferences.registerInt("urlbar.identitybox.padding-bottom", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
 					.addSelector("#urlbar #identity-box")
