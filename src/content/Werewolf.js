@@ -218,7 +218,6 @@ var Werewolf = {
 		this.preferences.registerInt("menubar.bar-height", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
 					.addSelector("#toolbar-menubar")
-					.addSelector("#toolbar-menubar > *")
 					.maxHeight(value));
 		}.bind(this));
 		
@@ -414,13 +413,13 @@ var Werewolf = {
 		
 		this.preferences.registerInt("urlbar.padding-bottom", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#urlbar")
+					.addSelector("#urlbar-container > #urlbar")
 					.margin("bottom", value));
 		}.bind(this));
 		
 		this.preferences.registerInt("urlbar.padding-top", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#urlbar")
+					.addSelector("#urlbar-container > #urlbar")
 					.margin("top", value));
 		}.bind(this));
 		
