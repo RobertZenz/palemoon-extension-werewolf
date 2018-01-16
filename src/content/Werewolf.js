@@ -218,6 +218,7 @@ var Werewolf = {
 		this.preferences.registerInt("menubar.bar-height", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
 					.addSelector("#toolbar-menubar")
+					.addSelector("#toolbar-menubar > *")
 					.maxHeight(value));
 		}.bind(this));
 		
