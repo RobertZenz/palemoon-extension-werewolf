@@ -389,8 +389,15 @@ var Werewolf = {
 							.add("background-color", this.preferences.get("urlbar.custom-border.background-color"))
 							.add("border", "1px solid " + this.preferences.get("urlbar.custom-border.border-color"))
 							.add("border-radius", this.preferences.get("urlbar.custom-border.border-radius") + "px"));
+					
+					this.styleSheet.register("urlbar.custom-border2", new CSSBuilder()
+							.addSelector("#urlbar #identity-box")
+							.margin("bottom", 0)
+							.margin("left", 0)
+							.margin("top", 0));
 				} else {
 					this.styleSheet.unregister("urlbar.custom-border");
+					this.styleSheet.unregister("urlbar.custom-border2");
 				}
 			} catch (error) {
 				// Ignore it.
