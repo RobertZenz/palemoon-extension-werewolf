@@ -26,7 +26,7 @@ var CSSBuilder = function(selector, important) {
 	this.important = (typeof important !== "undefined" ? important : true);
 	
 	/** The selector that is used. */
-	this.selector = selector;
+	this.selector = (typeof selector !== "undefined" ? selector : "");
 	
 	/**
 	 * Add the given property with the given value.
@@ -40,7 +40,7 @@ var CSSBuilder = function(selector, important) {
 	this.add = function(property, value, important) {
 		var declaration = property + ": " + value;
 		
-		if ((typeof important === "undefined" && this.important) || important) {
+		if (this.important || important) {
 			declaration = declaration + " !important";
 		}
 		
@@ -73,7 +73,11 @@ var CSSBuilder = function(selector, important) {
 	 * @return {CSSBuilder} This object.
 	 */
 	this.addSelector = function(selector) {
-		this.selector = this.selector + ", " + selector;
+		if (this.selector.length > 0) {
+			this.selector = this.selector + ", " + selector;
+		} else {
+			this.selector = selector;
+		}
 		
 		return this;
 	};
