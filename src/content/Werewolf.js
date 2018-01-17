@@ -380,6 +380,28 @@ var Werewolf = {
 			}
 		}.bind(this));
 		
+		var customBorderHandler = function(name, value) {
+			try {
+				if (this.preferences.get("urlbar.custom-border")) {
+					this.styleSheet.register("urlbar.custom-border", new CSSBuilder()
+							.addSelector("#urlbar-container > #urlbar")
+							.add("-moz-appearance", "none")
+							.add("background-color", this.preferences.get("urlbar.custom-border.background-color"))
+							.add("border", "1px solid " + this.preferences.get("urlbar.custom-border.border-color"))
+							.add("border-radius", this.preferences.get("urlbar.custom-border.border-radius") + "px"));
+				} else {
+					this.styleSheet.unregister("urlbar.custom-border");
+				}
+			} catch (error) {
+				// Ignore it.
+			}
+		}.bind(this);
+		
+		this.preferences.registerBool("urlbar.custom-border", customBorderHandler);
+		this.preferences.registerChar("urlbar.custom-border.background-color", customBorderHandler);
+		this.preferences.registerChar("urlbar.custom-border.border-color", customBorderHandler);
+		this.preferences.registerInt("urlbar.custom-border.border-radius", customBorderHandler);
+		
 		this.preferences.registerBool("urlbar.disable-highlights", function(name, value) {
 			if (value) {
 				this.styleSheet.register(name, new CSSBuilder()
