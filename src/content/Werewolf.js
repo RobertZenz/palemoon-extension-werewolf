@@ -400,6 +400,16 @@ var Werewolf = {
 			}
 		}.bind(this));
 		
+		this.preferences.registerBool("urlbar.force-full-height", function(name, value) {
+			if (value) {
+				this.styleSheet.register(name, new CSSBuilder()
+						.addSelector("#urlbar-container > #urlbar")
+						.height(9999));
+			} else {
+				this.styleSheet.unregister(name);
+			}
+		}.bind(this));
+		
 		this.preferences.registerInt("urlbar.identitybox.padding-bottom", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
 					.addSelector("#urlbar #identity-box > *")
