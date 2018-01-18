@@ -215,6 +215,18 @@ var Werewolf = {
 			}
 		}.bind(this));
 		
+		this.preferences.registerBool("general.fix-squeezed-icons", function(name, value) {
+			if (value) {
+				this.styleSheet.register(name, new CSSBuilder()
+						.addSelector("#back-button.toolbarbutton-1 > .toolbarbutton-icon")
+						.addSelector("#forward-button.toolbarbutton-1 > .toolbarbutton-icon")
+						.margin("top", -999)
+						.margin("bottom", -999));
+			} else {
+				this.styleSheet.unregister(name);
+			}
+		}.bind(this));
+		
 		this.preferences.registerInt("menubar.bar-height", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
 					.addSelector("#toolbar-menubar")

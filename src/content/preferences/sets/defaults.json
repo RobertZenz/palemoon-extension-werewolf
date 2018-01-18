@@ -22,6 +22,7 @@
 	"bookmarks.padding-bottom": 0,
 	"bookmarks.padding-top": 0,
 	"general.disable-animations": false,
+	"general.fix-squeezed-icons": false,
 	"menubar.bar-height": 32,
 	"menubar.padding-bottom": 0,
 	"menubar.padding-top": 0,
