@@ -227,6 +227,16 @@ var Werewolf = {
 			}
 		}.bind(this));
 		
+		this.preferences.registerBool("general.hide-notification-bar", function(name, value) {
+			if (value) {
+				this.styleSheet.register(name, new CSSBuilder()
+						.addSelector(".notificationbox-stack")
+						.hide());
+			} else {
+				this.styleSheet.unregister(name);
+			}
+		}.bind(this));
+		
 		this.preferences.registerInt("menubar.bar-height", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
 					.addSelector("#toolbar-menubar")
