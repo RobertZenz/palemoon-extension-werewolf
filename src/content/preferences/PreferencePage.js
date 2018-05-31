@@ -71,7 +71,7 @@ var PreferencePage = function(window) {
 			} else if (type === PreferenceType.INT) {
 				field.type = "number";
 			} else if (type === PreferenceType.STRING) {
-				if (field.id.contains("-color")) {
+				if (field.id.includes("-color")) {
 					field.type = "color";
 				} else {
 					field.type = "text";
