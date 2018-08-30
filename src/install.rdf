@@ -6,6 +6,7 @@
 		<em:id>werewolf@bonsaimind.org</em:id>
 		<em:name>Werewolf</em:name>
 		<em:version>1.0</em:version>
+		<em:creator>Robert 'Bobby' Zenz</em:creator>
 		<em:type>2</em:type>
 		<em:multiprocessCompatible>true</em:multiprocessCompatible>
 		<em:description>Customization options for the GUI.</em:description>
