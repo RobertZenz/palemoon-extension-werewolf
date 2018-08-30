@@ -1,9 +1,15 @@
-Werewolf - A Palemoon Extension
-===============================
+Werewolf - A Pale Moon Extension
+================================
 
-This extension allows to customize the GUI of [Palemoon](http://www.palemoon.org/) by providing a plethora of various settings.
+This extension allows to customize the GUI of
+[Pale Moon](http://www.palemoon.org/) by providing a plethora of various
+settings.
 
-This extension is the successor to [ThinBars](https://github.com/RobertZenz/ThinBars), [ThinBookmarks](https://github.com/RobertZenz/ThinBookmarks) and [ThinTabs](https://github.com/RobertZenz/ThinTabs)), so these extensions should be removed before Werewolf is installed.
+This extension is the successor to
+[ThinBars](https://github.com/RobertZenz/ThinBars),
+[ThinBookmarks](https://github.com/RobertZenz/ThinBookmarks) and
+[ThinTabs](https://github.com/RobertZenz/ThinTabs)), so these extensions should
+be removed before Werewolf is installed.
 
 
 License
@@ -15,5 +21,5 @@ This extension is licensed under the [Mozilla Public License](https://www.mozill
 Build
 -----
 
-Run make...or if you don't know what make is, zip the contents of the src directory and
-change the file ending to xpi.
+Run make...or if you don't know what make is, zip the contents of
+the src directory and change the file ending to xpi.
