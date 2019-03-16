@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+1.1
+---
+
+ * Added option to fix the missing bottom border when the tab bar is hidden.
+
+
 1.0
 ---
 
