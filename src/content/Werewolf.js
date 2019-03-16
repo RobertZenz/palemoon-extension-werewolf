@@ -215,6 +215,19 @@ var Werewolf = {
 			}
 		}.bind(this));
 		
+		this.preferences.registerBool("general.fix-missing-bottom-border", function(name, value) {
+			if (value) {
+				this.styleSheet.register(name, new CSSBuilder()
+						.addSelector("#TabsToolbar[collapsed=\"true\"]")
+						.add("visibility", "visible")
+						.add("height", "1px")
+						.add("border-bottom", "1px solid ThreeDShadow")
+						.add("overflow", "hidden"));
+			} else {
+				this.styleSheet.unregister(name);
+			}
+		}.bind(this));
+		
 		this.preferences.registerBool("general.fix-squeezed-icons", function(name, value) {
 			if (value) {
 				this.styleSheet.register(name, new CSSBuilder()
@@ -337,7 +350,7 @@ var Werewolf = {
 		
 		this.preferences.registerInt("tabs.height", function(name, value) {
 			this.styleSheet.register(name, new CSSBuilder()
-					.addSelector("#TabsToolbar")
+					.addSelector("#TabsToolbar:not([collapsed=\"true\"])")
 					.addSelector(".tabbrowser-tab")
 					.forceHeight(value));
 		}.bind(this));
